@@ -1,0 +1,353 @@
+:root{
+    
+    --primario: #ffc107;
+    --secundario: #0082a3;
+    --fondo1: #98c7d3;
+    --fondo2: #cef5ff;
+    --fondo3: #e9faff;
+    --sombreado: #809ba3;
+    --blanco: #ffffff;
+    --negro: #212121;
+    --gris: #444749;
+}
+
+/* global */
+html{
+    font-size: 62.5%; /*ayuda a igualar tamaño de letra con medida rem*/
+    box-sizing: border-box; /*hack para box-model*/
+    /*scroll-snap-type: y mandatory; /*Herramienta que ayuda a desplazar el scroll de seccion en seccion de forma mas intuitiva*/
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body{
+    font-size: 16px; /*1rem = 10px */
+    font-family: 'Bona Nova', serif;
+    background-image: linear-gradient(to top, var(--fondo1) 0%, var(--fondo2) 60%) ;
+}
+
+/*@media (min-width: 2000px) {
+     body::before{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 15%;
+        border-style: solid;
+        border-color: var(--sombreado);
+        background-color: var(--sombreado);
+     }
+     body::after{
+        content: '';
+        display: inline-block;
+        width: 15%;
+        border-style: solid;
+        border-color: var(--sombreado);
+        background-color: var(--sombreado);
+     }
+}*/
+
+.sombra{
+    box-shadow: 0px 5px 15px 0px rgba(29,89,117,1);
+    background-color: var(--fondo3);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/*SCROLL-SNAP*/
+
+/*.inicio, .contenedor, .formulario{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}*/
+
+/*tipografia titulos*/
+h1{
+    text-transform: uppercase;
+    font-size: 3.8rem;
+}
+h2{
+    font-size: 2.8rem;
+}
+h3{
+    font-size: 1.8rem;
+}
+h1,h2,h3{
+    text-align: center;
+}
+.titulo span{
+    font-size: 2rem;
+}
+
+/*etiquetas body*/
+.contenedor{
+    max-width: 120rem;
+    margin: 0 auto; 
+    /*esta linea equivale a: 
+    margin-top: 0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto;*/
+}
+.boton{
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    width:90%;
+    text-align: center;
+    border: none;
+}
+.boton:hover{
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+     .boton{
+         width: auto;
+     }
+}
+
+/*UTILIDADES GENERALES*/
+.w-sm-100{
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+     .w-sm-100{
+         width: auto;
+     }
+}
+.flex{
+    display: flex;
+}
+.alinear-dch{
+    justify-content: end;
+}
+.nav-bg{
+    background-color: var(--secundario);
+}
+
+/* Menu navegacion y caja presentacion*/
+.barra-navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .barra-navegacion{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+.barra-navegacion a{
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+.barra-navegacion a:hover{
+    background-color: var(--primario);
+    color: var(--negro);
+}
+.presentacion, .presentacion-sobre-mi, .presentacion-proyectos, .presentacion-contacto{
+    background-image: url(../img/img-inicio.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 350px;
+    position: relative;
+    margin-bottom: 2rem;
+}
+.contenido-presentacion{
+    position: absolute;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    /*NUEVA OPCION MAS DINAMICA*/ 
+    background-color: rgb(0 0 0 / 80%);
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contenido-presentacion h2,
+.contenido-presentacion p{
+    color: var(--blanco)
+}
+.contenido-presentacion .ubicacion{
+    display:flex;
+    align-items: flex-end;
+}
+.contenido-presentacion .ubicacion p{
+    margin-left: 10px;
+}
+
+/*Caja sevicios*/
+@media (min-width: 768px) {
+     .servicios{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    /*grid-template-columns: 1fr 1fr 1fr; */
+    /*fr = fraccion del entero, es decir, divide el 100% en las partes que se determine*/
+
+    /*grid-template-columns: 300px 300px;
+    grid-template-rows: 200px 800px;*/
+    /*esto se simplificaria asi: 
+    grid: 200px 800px / 300px 300px; (primero medidas de rows y luego medidas de colums*/
+}
+}
+
+.servicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio p, .apartado p{
+    line-height: 2;
+    text-align: center;
+}
+.servicio h3, .apartado h3{
+    color: var(--secundario);
+    font-weight: normal;
+    text-decoration-line: underline;
+}
+
+.servicio .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*FORMULARIO CONTACTO*/
+.formulario{
+    background-color: var(--sombreado);
+    width: min(60rem, 100%); /*Utiliza el valor mas pequeño de los dos indicados. Ayuda a ahorrar codigo para las mediaqueries*/
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset{
+    border: none;
+}
+
+.formulario legend{
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 1rem auto;
+    color: var(--primario);
+}
+
+@media (min-width: 768px) {
+    .campos-formulario{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto 20rem;
+        column-gap: 1rem;
+    }
+    .campo:nth-child(3), .campo:nth-child(4){
+        grid-column: 1 / 3;
+    }
+}
+
+.campo{
+    margin-bottom: 1rem;
+}
+
+.campo label{
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.imput-text{
+    width: 100%;
+    height: 80%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+/*PIE DE PAGINA*/
+
+.pie-web{
+    text-align: center;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--gris);
+}
+
+/*HTML - SOBRE-MI -> ESTILOS*/
+/*Caja .sobre-mi*/
+.presentacion-sobre-mi{
+    background-image: url(../img/img-sobre-mi.jpg);
+    /*background-position: center;
+    background-position-y: -22rem;*/
+    height: 230px;
+}
+
+/*HTML - PROYECTOS -> ESTILOS*/
+/*Caja .proyectos*/
+.presentacion-proyectos{
+    background-image: url(../img/img-proyectos.jpg);
+    /*background-position-y: -5rem;*/
+    height: 230px;
+}
+
+/*HTML - CONTACTO -> ESTILOS*/
+/*Caja .contacto*/
+
+.presentacion-contacto{
+    background-image: url(../img/img-contacto.png);
+    /*background-position-y: -15rem;*/
+    height: 230px;
+}
+
+
+
+/*EJEMPLO RESPONSIVE WEB DESIGN CON DIFERENTES MEDIDAS*/
+    /*Escritorio*
+    @media (min-width: 1199.98px)  {
+        body{background: red;}
+    }
+    /*Fin Escritorio*/
+
+    /*Tablet*/
+    /*Portrait*
+    @media (min-width: 576px) and (max-width: 991.98px) and (orientation:portrait) {
+        body{background: orange;}
+    }
+
+    /*landscape*
+    @media (min0-width: 991.98px) and (max-width: 1199.98px)and (orientation:landscape) {
+        body{background: blue;}
+    }
+    /*fin tablet*/
+
+    /*movil*/
+    /*Portrait*/
+    /*Default*
+    @media (max-width: 575.98px)and (orientation:portrait) {
+        body{background: green;}
+    }
+    /*landscape*
+    @media (min-width: 576px) and (max-width: 991.98px) and (orientation:landscape) {
+        body{background: black;}
+    }
+    /*fin movil*/
+
+
