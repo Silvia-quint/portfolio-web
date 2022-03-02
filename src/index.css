@@ -326,6 +326,13 @@ h1,h2,h3{
     height: 230px;
 }
 
+.sobre-mi {
+    text-align:justify;
+    column-count: 2;
+    column-gap: 5%;
+    column-rule: 2px solid #effdff;
+}
+
 /*HTML - PROYECTOS -> ESTILOS*/
 /*Caja .proyectos*/
 .presentacion-proyectos{
