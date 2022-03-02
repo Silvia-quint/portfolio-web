@@ -1,3 +1,28 @@
+/* stylelint-disable max-empty-lines */
+/* stylelint-disable number-leading-zero */
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable declaration-empty-line-before */
+/* stylelint-disable declaration-block-semicolon-newline-after */
+/* stylelint-disable function-url-quotes */
+/* stylelint-disable at-rule-empty-line-before */
+/* stylelint-disable declaration-colon-space-after */
+/* stylelint-disable rule-empty-line-before */
+/* stylelint-disable alpha-value-notation */
+/* stylelint-disable function-comma-space-after */
+/* stylelint-disable color-function-notation */
+/* stylelint-disable length-zero-no-unit */
+/* stylelint-disable declaration-block-semicolon-space-before */
+/* stylelint-disable string-quotes */
+/* stylelint-disable selector-pseudo-element-colon-notation */
+/* stylelint-disable selector-list-comma-newline-after */
+/* stylelint-disable max-line-length */
+/* stylelint-disable comment-empty-line-before */
+/* stylelint-disable comment-whitespace-inside */
+/* stylelint-disable color-hex-length */
+/* stylelint-disable indentation */
+/* stylelint-disable custom-property-empty-line-before */
+/* stylelint-disable no-eol-whitespace */
+/* stylelint-disable block-opening-brace-space-before */
 :root{
     
     --primario: #ffc107;
@@ -179,6 +204,7 @@ h1,h2,h3{
 }
 .contenido-presentacion h2,
 .contenido-presentacion p{
+    /* stylelint-disable-next-line declaration-block-trailing-semicolon */
     color: var(--blanco)
 }
 .contenido-presentacion .ubicacion{
