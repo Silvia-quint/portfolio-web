@@ -398,6 +398,20 @@ h1,h2,h3{
     font-size: 1rem;
 }
 
+@media (max-width: 812px) {
+    .paragraph-columns{
+        display: flex;
+        flex-direction: column;
+        text-align:justify;
+    }
+    .paragraph-columns p{
+        padding: 1px;
+    }
+    .paragraph-5{
+        margin-top: 10px;
+    }
+}
+
 /*HTML - PROYECTOS -> ESTILOS*/
 /*Caja .proyectos*/
 .presentacion-proyectos{
