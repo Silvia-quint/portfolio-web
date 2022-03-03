@@ -386,6 +386,7 @@ h1,h2,h3{
     flex-direction: column;
     align-items: flex-end;
     padding: 15px;
+    text-align:center;
 }
 .sign-name > h3{
     color: var(--secundario);
@@ -409,6 +410,16 @@ h1,h2,h3{
     }
     .paragraph-5{
         margin-top: 10px;
+    }
+    .sign-name > h3{
+        font-size: 1.3rem;
+    }
+    .sign-name > h4{
+        font-size: .9rem;
+    }
+    .sign-img > img{
+        height: 140px;
+        width: 150px;
     }
 }
 
